@@ -81,25 +81,29 @@ Here is a snippet of the analysis
  Mean Squared Error (MSE): 2.27
   The model’s predictions are, on average, off by approximately √2.27 ≈ 1.51     units in TDS/X (Total Debt Service as a percentage of exports). This           indicates relatively accurate predictions given the TDS/X range of 11.2–29.1.
 
-  -R-squared (R²): 0.849
+  R-squared (R²): 0.849
   84.9% of the variance in TDS/X is explained by the predictors (EDT/GNP,        EDT/X, and INT/X). This suggests a strong fit, though the small sample size     (9 data points) raises potential overfitting concerns.
 
   -EDT/GNP (External Debt to GNP Ratio): Coefficient = -0.022
   For every 1-unit increase in EDT/GNP, TDS/X decreases by 0.022 units,         holding other variables constant.
 
-  -This weak negative relationship suggests that higher debt relative to GNP     is marginally associated with lower debt service burdens, though the         effect is minimal and may not be statistically significant.
+  This weak negative relationship suggests that higher debt relative to GNP     is marginally associated with lower debt service burdens, though the         effect is minimal and may not be statistically significant.
 
-  -The effect is small, indicating that debt relative to exports has limited     direct impact on debt service.
+  The effect is small, indicating that debt relative to exports has limited     direct impact on debt service.
 
-  -For every 1-unit increase in INT/X, TDS/X increases by 1.255 units,           holding other variables constant.
+  For every 1-unit increase in INT/X, TDS/X increases by 1.255 units,           holding other variables constant.
 
-  -This is the strongest predictor, as interest payments directly contribute     to total debt service. For example, a rise in INT/X from 6.0 (1980) to        13.9 (1988) increases TDS/X by ≈9.9 units—consistent with the observed       jump from 11.2 to 29.1.
+  This is the strongest predictor, as interest payments directly contribute     to total debt service. For example, a rise in INT/X from 6.0 (1980) to        13.9 (1988) increases TDS/X by ≈9.9 units—consistent with the observed       jump from 11.2 to 29.1.
 
-  -The baseline TDS/X when all predictors are zero. This has limited             practical meaning since predictors like INT/X cannot realistically be zero.
-
-
+  
 
 ### Recommendations
   - Multicollinearity Risk: Variables like EDT/X and INT/X may be correlated (e.g., higher debt could lead to higher interest payments), which could inflate coefficient variances.
+  - Policy Focus: Managing interest rates or renegotiating debt terms (to reduce INT/X) would most effectively lower TDS/X.
+
+- Debt Structure: While EDT/GNP and EDT/X have minor effects, their long-term trends should still be monitored to prevent systemic risks.
 ### Limitataions
+- Sample Size Limitation: With only 9 data points, the model risks overfitting despite the high R². Validation with more data is recommended.
+- This model provides actionable insights but should be supplemented with robustness checks (e.g., p-values, multicollinearity tests) for decision-making.
+- The baseline TDS/X when all predictors are zero. This has limited             practical meaning since predictors like INT/X cannot realistically be zero.
 
