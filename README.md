@@ -22,7 +22,9 @@
 - [Reference](#reference)
  
 ## Project overview
-Analyzing debt patterns, economic vulnerabilities, and policy implications in developing economies using data science.
+Analyzing debt patterns, economic vulnerabilities, and policy implications in developing economies using data science.![Bar plot Comparison](https://github.com/user-attachments/assets/2fa9c97b-e229-4571-a54b-164b92d6cf2e)
+
+
 
 ### Data Sources
 Debt and export data: The Primary dataset"global_south_debt.csv"  is a combination of data scrapping from the World Bank Reports and Stista
@@ -48,6 +50,9 @@ EDA aimed to answer the question below;
  - Which economy had the lowest Debt to Export ratio?
  - How has the Global South Economies' debts grown?
  - what percentage of the GDP goes to  debt repayment interest INT?
+
+   ![Trends Over the year](https://github.com/user-attachments/assets/cab46639-f926-40b2-88e8-bc49e848a11d)
+
 
 ### Data Analysis
 Here is a snippet of the analysis
