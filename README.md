@@ -1,5 +1,26 @@
 # Global-south-debt-analysis-and-impact
 ---
+## Table of Content
+- [Project overview](#project-overview)
+  
+- [Data Sources](#data-sources)
+
+- [Tools](#tools)
+
+- [Data Wrangling](#data-wrangling)
+
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+
+- [Data Analysis](#data-analysis)
+
+- [Findings](#findings)
+
+- [Recommendations](#recommendations)
+
+- [Limitataions](#limitataions)
+
+- [Reference](#reference)
+ 
 ## Project overview
 Analyzing debt patterns, economic vulnerabilities, and policy implications in developing economies using data science.
 
@@ -13,7 +34,7 @@ Debt and export data: The Primary dataset"global_south_debt.csv"  is a combinati
 - JuypterNotebooks
 - Tableau - Dashbords/Reports
   
-### Data Wrangling/Preparations
+### Data Wrangling
 
 The data preparation entailed the following:
 1. Data Loading and Inspection(A snippet of what the columns had)
@@ -21,7 +42,7 @@ The data preparation entailed the following:
 3. Dataframe creation
 4. Data Cleaning and formating
 
-### Exploratory Data Analysis (EDA)
+### Exploratory Data Analysis EDA
 EDA aimed to answer the question below;
  - Which economy had the largest Debt to Export ratio?
  - Which economy had the lowest Debt to Export ratio?
@@ -77,7 +98,7 @@ Here is a snippet of the analysis
   plt.title("Actual vs Predicted TDS/X")
   plt.show()
 ```
-### Findings/Results
+### Findings
  Mean Squared Error (MSE): 2.27
   The model’s predictions are, on average, off by approximately √2.27 ≈ 1.51     units in TDS/X (Total Debt Service as a percentage of exports). This           indicates relatively accurate predictions given the TDS/X range of 11.2–29.1.
 
@@ -106,4 +127,5 @@ Here is a snippet of the analysis
 - Sample Size Limitation: With only 9 data points, the model risks overfitting despite the high R². Validation with more data is recommended.
 - This model provides actionable insights but should be supplemented with robustness checks (e.g., p-values, multicollinearity tests) for decision-making.
 - The baseline TDS/X when all predictors are zero. This has limited             practical meaning since predictors like INT/X cannot realistically be zero.
-
+### Reference
+The Growing Debt Burdens of Global South Countries[Link](https://cepr.net/publications/the-growing-debt-burdens-of-global-south-countries-standing-in-the-way-of-climate-and-development-goals/)
