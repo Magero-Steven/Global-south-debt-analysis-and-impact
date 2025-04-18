@@ -24,7 +24,7 @@
 ## Project overview
 Analyzing debt patterns, economic vulnerabilities, and policy implications in developing economies using data science.![Bar plot Comparison](https://github.com/user-attachments/assets/2fa9c97b-e229-4571-a54b-164b92d6cf2e)
 
-
+---
 
 ### Data Sources
 Debt and export data: The Primary dataset"global_south_debt.csv"  is a combination of data scrapping from the World Bank Reports and Stista
@@ -43,6 +43,7 @@ The data preparation entailed the following:
 2. Identifying/Handling missing values.
 3. Dataframe creation
 4. Data Cleaning and formating
+
 
 ### Exploratory Data Analysis EDA
 EDA aimed to answer the question below;
