@@ -56,6 +56,21 @@ EDA aimed to answer the question below;
 
 
 ### Data Analysis
+
+
+  -global-south-debt-analysis/  
+├── data/  
+│   ├── raw/                   # Raw datasets (World Bank, IMF sources)  
+│   └── processed/            # Cleaned data for analysis  
+├── notebooks/  
+│   ├── EDA.ipynb             # Exploratory Data Analysis  
+│   └── Model_Analysis.ipynb  # KNN implementation & results  
+├── src/  
+│   ├── preprocessing.py      # Data cleaning utilities  
+│   └── modeling.py           # KNN and statistical models  
+├── outputs/                  # Visualizations (PNG/PDF)  
+├── requirements.txt          # Python dependencies  
+└── LICENSE  
 Here is a snippet of the analysis
 
 ```python
