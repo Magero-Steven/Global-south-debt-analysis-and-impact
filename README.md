@@ -19,6 +19,8 @@
 
 - [Limitataions](#limitataions)
 
+- [Dashboard](#dashboard)
+
 - [Reference](#reference)
  
 ## Project overview
@@ -198,9 +200,14 @@ FROM global_south_debt;
   - Policy Focus: Managing interest rates or renegotiating debt terms (to reduce INT/X) would most effectively lower TDS/X.
 
 - Debt Structure: While EDT/GNP and EDT/X have minor effects, their long-term trends should still be monitored to prevent systemic risks.
+  
 ### Limitataions
 - Sample Size Limitation: With only 9 data points, the model risks overfitting despite the high R². Validation with more data is recommended.
 - This model provides actionable insights but should be supplemented with robustness checks (e.g., p-values, multicollinearity tests) for decision-making.
-- The baseline TDS/X when all predictors are zero. This has limited             practical meaning since predictors like INT/X cannot realistically be zero.
+- The baseline TDS/X when all predictors are zero. This has limited practical meaning since predictors like INT/X cannot realistically be zero.
+  
+### Dashboard
+  - The dashbord gives the visualization of the data post analysis and an easy understanding of the whys[Link](https://public.tableau.com/views/GlobalSouthDebtAnalysis/GlobalSouthDebtAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+    
 ### Reference
 The Growing Debt Burdens of Global South Countries[Link](https://cepr.net/publications/the-growing-debt-burdens-of-global-south-countries-standing-in-the-way-of-climate-and-development-goals/)
