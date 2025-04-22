@@ -53,25 +53,79 @@ EDA aimed to answer the question below;
  - what percentage of the GDP goes to  debt repayment interest INT?
 
    ![Trends Over the year](https://github.com/user-attachments/assets/cab46639-f926-40b2-88e8-bc49e848a11d)
+``` sql
 
+SELECT *
+FROM global_south_debt;
+
+-- Perform SQL Analysis
+-- 1. Yearly Trends: Debt-to-GNP ratio over time
+SELECT 
+    Year,
+    EDT_GNP,
+    EDT_X,
+    INT_X,
+    TDS_X
+FROM global_south_debt
+ORDER BY Year;
+
+-- 2. Peak Debt Years: Find years with the highest ratios:
+
+-- Highest Debt-to-GNP Year with highest EDT/X ratio
+SELECT Year, EDT_GNP 
+FROM global_south_debt 
+ORDER BY EDT_GNP DESC 
+LIMIT 1;
+
+-- Highest Debt Service (TDS/X)
+SELECT Year, TDS_X 
+FROM global_south_debt 
+ORDER BY TDS_X DESC 
+LIMIT 1;
+
+-- 3. Year-over-Year Changes:
+-- Calculate percentage changes to spot volatility
+SELECT 
+    Year,
+    EDT_GNP,
+    (EDT_GNP - LAG(EDT_GNP) OVER (ORDER BY Year)) / LAG(EDT_GNP) OVER (ORDER BY Year) * 100 AS EDT_GNP_YoY,
+    TDS_X,
+    (TDS_X - LAG(TDS_X) OVER (ORDER BY Year)) / LAG(TDS_X) OVER (ORDER BY Year) * 100 AS TDS_X_YoY
+FROM global_south_debt;
+
+-- . Averages:
+-- Compare metrics against long-term averages:
+
+SELECT 
+    AVG(EDT_GNP) AS Avg_EDT_GNP,
+    AVG(EDT_X) AS Avg_EDT_X,
+    AVG(INT_X) AS Avg_INT_X,
+    AVG(TDS_X) AS Avg_TDS_X
+FROM global_south_debt;
+
+-- Debt Burden Analysis: 
+-- Compare EDT/X vs TDS/X to assess repayment capacity
+SELECT 
+    Year,
+    EDT_X,
+    TDS_X,
+    (EDT_X / TDS_X) AS Debt_Burden_Ratio
+FROM global_south_debt;
+
+-- Interest vs Total Debt Service:
+-- -- Track INT/X vs TDS/X correlation
+SELECT 
+    Year,
+    INT_X,
+    TDS_X,
+    (INT_X / TDS_X) AS Interest_Share
+FROM global_south_debt;
+
+``` 
 
 ### Data Analysis
 
 
-  -global-south-debt-analysis/  
-├── data/  
-│   ├── raw/                   # Raw datasets (World Bank, IMF sources)  
-│   └── processed/            # Cleaned data for analysis  
-├── notebooks/  
-│   ├── EDA.ipynb             # Exploratory Data Analysis  
-│   └── Model_Analysis.ipynb  # KNN implementation & results  
-├── src/  
-│   ├── preprocessing.py      # Data cleaning utilities  
-│   └── modeling.py           # KNN and statistical models  
-├── outputs/                  # Visualizations (PNG/PDF)  
-├── requirements.txt          # Python dependencies  
-└── LICENSE  
-Here is a snippet of the analysis
 
 ```python
 
